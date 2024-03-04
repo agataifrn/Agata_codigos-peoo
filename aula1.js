@@ -8,3 +8,4 @@ console.log("Hoje é " + dia);
 alert("Hoje é " + dia);
 document.querySelector('#dia').innerHTML = 'Hoje é ' + dia;
 // Três formas de aparecer o input que o site pegou;
+// A
