@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+
+<h2>Calculadora de IMC</h2>
+
+<form id="calcIMC">
+    <label for="nome">Massa (Kg): </label><br>
+    <input type="number" id="massa" name="massa"><br><br>
+    
+    <label for="altura">Altura (m): </label><br>
+    <input type="number" id="altura" name="altura"><br><br>
+    <!-- criou as caixas pras informações do massa e altura -->
+
+    <button type="button" onclick="calculoIMC()">Calcular</button>
+    <!-- criou um botão pra enviar os inputs pro computador -->
+
+</form>
+
+<div id="resultado"></div>
+<!-- #div é uma caixinha em branco virtual, pra colocar as informações dentro -->
+<script src="calculadora_IMC.js"></script>
+<!-- pega a função do código JS com o #source, depois de apertar o botão -->
+
+</body>
+</html>
