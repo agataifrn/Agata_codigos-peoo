@@ -7,7 +7,7 @@ let msg3 = `String com crase`;
 console.log(msg1);
 console.log(msg2);
 console.log(msg3);
-// isso pra printar as strings
+// isso para printar as strings
 
 const nome = 'Fulano';
 const idade = 15;
