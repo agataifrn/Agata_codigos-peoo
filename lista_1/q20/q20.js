@@ -25,12 +25,14 @@ function validarDados() {
         resultado.innerHTML = '<b>Preencha a senha</b>';
     else if (senha != c_senha)
         resultado.innerHTML = '<b>Senhas diferentes</b>';
-    else if (!nome)
-        resultado.innerHTML = '<b></b>';
-    else if (!nome)
-        resultado.innerHTML = '<b></b>';
-    else if (!nome)
-        resultado.innerHTML = '<b></b>';
+    else if (!email.includes('@') || !email.includes('.'))
+        resultado.innerHTML = '<b>E-mail invalido (sem arroba e/ou ponto)</b>';
+    else if (!conferirSenha(senha))
+        resultado.innerHTML = '<b>Senha invalida (8 caracteres, letras e pontos)</b>';
+    else {
+        resultado.innerHTML = '<b>Cadastro validado</b>';
+
+    }
 
 
 }
