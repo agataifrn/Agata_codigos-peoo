@@ -7,35 +7,40 @@ senha e confirmação de senha. Implemente uma função JavaScript que valide:
 
 Exiba mensagens de erro específicas para cada validação que falhar. */
 
+
 function validarDados() {
-    let nome = document.getElementById("nome").value;
-    let email = document.getElementById("email").value;
-    let senha = document.getElementById("senha").value;
-    let c_senha = document.getElementById("confirme_senha").value;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+    const c_senha = document.getElementById("confirme_senha").value;
 
-    let nome_v = false
-    let email_v = false
-    let senha_v = false
-    let c_senha_v = false
+    let resultado = document.getElementById('resultado')
 
-    // Conferir se todos os campos foram preenchidos
-        if (nome.lenght >= 1) {
-            nome_v = true
-        }
-        if (email.lenght >= 1) {
-            email_v = true
-        }
-        if (senha.lenght >= 1) {
-            senha_v = true
-        }
-        if (c_senha.lenght >= 1) {
-            c_senha_v = true
-        }
-        let valido1 = (nome_v, email_v, senha_v, c_senha_v)
+    // A exclamação significa "not" 
+    if (!nome)
+        resultado.innerHTML = '<b>Preencha o nome</b>';
+    else if (!email)
+        resultado.innerHTML = '<b>Preencha o email</b>';
+    else if (!senha || !c_senha)
+        resultado.innerHTML = '<b>Preencha a senha</b>';
+    else if (senha != c_senha)
+        resultado.innerHTML = '<b>Senhas diferentes</b>';
+    else if (!nome)
+        resultado.innerHTML = '<b></b>';
+    else if (!nome)
+        resultado.innerHTML = '<b></b>';
+    else if (!nome)
+        resultado.innerHTML = '<b></b>';
 
-        if (valido1 = false) {
-            
-        }
 
+}
+
+function conferirSenha() {
+    // Usando regex (expressão regular), testa a quantidade de letras, se tem números e letras
+    const testarQuant = senha.length >= 8;
+    const testarLetras = /[a-zA-Z]/;
+    const testarNúmeros = /\d/;
+
+    return testarQuant && testarLetras && testarNúmeros;
 
 }

@@ -16,4 +16,4 @@ function cadastrar() {
     linha.insertCell(3).textContent = descricao;
 
     document.getElementById('formProduto').reset();
-}
+} 
