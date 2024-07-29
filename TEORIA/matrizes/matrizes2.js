@@ -7,6 +7,10 @@ const B = [[2, 2, 32],
 
 const C = soma(A, B);
 
+console.table(A);
+console.table(B);
+console.table(C);
+
 function soma(a, b) {
     /* 
     Cria uma matriz pro resultado com um vetor vazio, 
@@ -16,20 +20,19 @@ function soma(a, b) {
     /* 
     Define que as linhas são o tamanho do "X" 
     (retorna 2, a quantidade de vetores/listas) */
-    let linhas = X.length;
+    let linhas = a.length;
     /* 
     Define que as colunas são o tamanho de algum dos vetores de "X" 
     (retorna 3, a quantidade de elementos do primeiro vetor) */
-    let colunas = X[0].length;
+    let colunas = a[0].length;
 
     // Percorre a linha (horizontal)
     for (let lin_atual = 0; lin_atual < linhas; lin_atual++) {
-            resultado[lin_atual] = [];
+            c[lin_atual] = [];
 
             // Percorre a coluna (vertical)
             for (let col_atual = 0; col_atual < colunas; col_atual++) {
-                    resultado[lin_atual][col_atual] = 
-                        a[lin_atual][col_atual] + b[lin_atual][col_atual];
+                    c[lin_atual][col_atual] = a[lin_atual][col_atual] + b[lin_atual][col_atual];
             }
         /* 
         "lin_atual" e "col_atual" são os valores que estão rodando no momento do for, 
@@ -40,6 +43,3 @@ function soma(a, b) {
     return c;
 }
 
-console.table(A);
-console.table(B);
-console.table(C);
