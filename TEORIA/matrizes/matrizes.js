@@ -18,10 +18,12 @@ function somaM() {
     let resultado = [];
 
     // Percorre a linha (horizontal)
+    // "i" é a linha
     for (let i = 0; i < A.length; i++) {
             resultado[i] = [];
 
             // Percorre a coluna (vertical)
+            // "j" é a coluna
             for (let j = 0; j < A[i].length; j++) {
                     resultado[i][j] = A[i][j] + B[i][j];
             }
