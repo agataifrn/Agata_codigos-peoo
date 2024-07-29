@@ -27,15 +27,15 @@ function soma(a, b) {
     let colunas = a[0].length;
 
     // Percorre a linha (horizontal)
-    for (let lin_atual = 0; lin_atual < linhas; lin_atual++) {
-            c[lin_atual] = [];
+    for (let lin = 0; lin < linhas; lin++) {
+            c[lin] = [];
 
             // Percorre a coluna (vertical)
-            for (let col_atual = 0; col_atual < colunas; col_atual++) {
-                    c[lin_atual][col_atual] = a[lin_atual][col_atual] + b[lin_atual][col_atual];
+            for (let col = 0; col < colunas; col++) {
+                    c[lin][col] = a[lin][col] + b[lin][col];
             }
         /* 
-        "lin_atual" e "col_atual" são os valores que estão rodando no momento do for, 
+        "lin" e "col" são os valores que estão rodando no momento do for, 
         os valores locais.
         As "linhas" e "colunas" são os valores globais a ser comparados. 
         */
