@@ -29,6 +29,6 @@ function exibir_posts(posts) {
     }
     /* Para cada post em todas as postagens, cria-se uma tag <div>, 
     cria 4 tags <p> de dados dentro da <div>, 
-    e repete até acabar as postagens*/
+    e repete até acabar as postagens.*/
 }
     
