@@ -5,7 +5,17 @@ bem como quem escreveu cada post. */
 const url_post = 'https://jsonplaceholder.typicode.com/posts';
 const url_users = 'https://jsonplaceholder.typicode.com/users';
 
-// Aqui que o código é executado
+let usuarios = ["###"];
+
+fetch(url_users)
+    .then(response => response.json())
+    .then(users => criar_vetor(users));
+
+function criar_vetor(users) {
+    for (let user of users)
+        usuarios.push(user.name);
+}
+
 fetch (url_post)
     .then(response => response.json())
     .then(post => exibir_posts(posts));
