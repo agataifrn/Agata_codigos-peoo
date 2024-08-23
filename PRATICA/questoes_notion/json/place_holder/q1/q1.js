@@ -18,7 +18,7 @@ function criar_vetor(users) {
 
 fetch (url_post)
     .then(response => response.json())
-    .then(post => exibir_posts(posts));
+    .then(posts => exibir_posts(posts));
 
 function exibir_posts(posts) {
     let postagens = document.getElementById('postagens'); 
@@ -31,8 +31,10 @@ function exibir_posts(posts) {
         // Cria nova <div>
         postagem.innerHTML =
             `
-            <p>#${post.id} Usuário
-
+            <p>#${post.id}
+            (Usuário: ${usuarios[post.userId]})<br>
+            <b>Título:</b> ${post.title}<br>
+            <b>Texto:</b> ${post.body}</p>
             `;
         postagens.appendChild(postagem);
         // Adiciona a <div> na frente da última
