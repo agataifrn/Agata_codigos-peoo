@@ -1,0 +1,9 @@
+let cor = "azul"; // Escopo global
+
+function mostrarCor() {
+	cor = "vermelha"; // Escopo de função (global)
+	return cor; // Saída: vermelha
+}
+
+console.log(mostrarCor());
+console.log(cor); // Saída: vermelha
