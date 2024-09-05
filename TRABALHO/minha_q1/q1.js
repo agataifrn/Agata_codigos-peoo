@@ -16,7 +16,7 @@ function pesquisar_data() {
                 <div>
                     <hr>
                     <h3>Jogo: ${jogo.home_team.name} vs ${jogo.away_team.name}</h3>
-                    <p>Data e Hora: ${new Date(jogo.datetime).toLocaleString()}</p>
+                    <p>Data e Hora: ${new Date(jogo.datetime).toLocaleString()}</p> <!-- Cria um objeto Date a partir da data e hora fornecidas -->
                     <p>Estádio: ${jogo.venue}</p>
                     <hr>
                 </div>
