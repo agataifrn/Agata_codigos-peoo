@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 01</title>
 </head>
+
+<style>
+    /* Define a classe com cores alternadas */
+    .alternar-cores:nth-child(even) {
+        background-color: #f0f0f081; /* Cor de fundo para divs pares */
+    }
+    .alternar-cores:nth-child(odd) {
+        background-color: #fe0151de; /* Cor de fundo para divs ímpares */
+    }
+    /* Estilo adicional para as divs */
+    .alternar-cores {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+</style>
+
 <body>
     <h1>Pesquisar jogos por data</h1>
         <label for="data">Data:</label>
@@ -13,8 +30,9 @@
         <button type="button" onclick="pesquisar_data()">Pesquisar</button>
         
     <h2>Jogos realizados na data pesquisada:</h2>
-    <div id="resultado">
-
+    <div id="resultado"></div>
 </body>
+
 <script src="q1.js"></script>
+
 </html>
