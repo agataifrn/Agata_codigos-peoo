@@ -22,7 +22,7 @@ function mostrar_jogos(data, dataEspecifica) {
         document.getElementById('resultado').innerHTML = "<p>Nenhum jogo encontrado nesta data.</p>";
     }  // Se não for maior que zero (ou seja, não tiver jogos), exibe mensagem que não tem jogo.
 
-}   // Função principal para fazer a pesquisa de jogos
+}   // Função principal para fazer a pesquisa de jogos.
 
 function pesquisar_data() {
     let dataEspecifica = ''  // Define a variável da data como vazia.
@@ -34,6 +34,4 @@ function pesquisar_data() {
         .then(data => mostrar_jogos(data, dataEspecifica)) // Executa a função.
         .catch(error => console.error("Erro ao buscar os jogos:", error));  // Mensagem de erro no console.
 
-}  /* Essa função faz a conexão entre o usuário e o programa,
-      quando ele aperta o botão de "Pesquisar", ele processa o JSON
-      e executa a função de mostrar os jogos.*/
+}  // Função para buscar e mostrar os jogos com base na data especificada, puxando a função principal.
