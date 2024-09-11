@@ -1,5 +1,17 @@
 // QUESTÃO: Fazer uma requisição para a API e exibir todos os jogos de uma data específica.
 
+function pesquisar_data() {
+    let dataEspecifica = ''  // Define a variável da data como vazia.
+    dataEspecifica = document.getElementById('data').value;  // Puxa o valor do input (a data do jogo) do HTML.
+    const url = "https://worldcupjson.net/matches";
+
+    fetch(url)
+        .then(response => response.json()) // Pegou o link do site, e transformou o JSON para objeto JavaScript.
+        .then(data => mostrar_jogos(data, dataEspecifica)) // Executa a função.
+        .catch(error => console.error("Erro ao buscar os jogos:", error));  // Mensagem de erro no console.
+
+}  // Faz requesição para a API, e puxa a função principal.
+
 function mostrar_jogos(data, dataEspecifica) {
     const jogosNaData = data.filter(jogo => jogo.datetime.startsWith(dataEspecifica));  // Filtra o dado específico para saber a data
     document.getElementById('resultado').innerHTML = '';  // Define a div do resultado como vazio.
@@ -24,14 +36,3 @@ function mostrar_jogos(data, dataEspecifica) {
 
 }   // Função principal para fazer a pesquisa de jogos.
 
-function pesquisar_data() {
-    let dataEspecifica = ''  // Define a variável da data como vazia.
-    dataEspecifica = document.getElementById('data').value;  // Puxa o valor do input (a data do jogo) do HTML.
-    const url = "https://worldcupjson.net/matches";
-
-    fetch(url)
-        .then(response => response.json()) // Pegou o link do site, e transformou o JSON para objeto JavaScript.
-        .then(data => mostrar_jogos(data, dataEspecifica)) // Executa a função.
-        .catch(error => console.error("Erro ao buscar os jogos:", error));  // Mensagem de erro no console.
-
-}  // Função para buscar e mostrar os jogos com base na data especificada, puxando a função principal.
