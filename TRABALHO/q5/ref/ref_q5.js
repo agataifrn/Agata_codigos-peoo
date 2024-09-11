@@ -25,7 +25,7 @@ function resultado() { // botão chama a função resultado
         <p>Data: ${datetime.toLocaleDateString()}</p> <!-- Exibe a data da partida -->
         <p>Hora: ${datetime.toLocaleTimeString()}</p> <!-- Exibe o horário da partida -->
         <p>Localização: Estádio ${match.venue} em ${match.location}</p><br> <!-- Exibe a localização da partida -->
-        <h3>Gols e Penalidades:</h3>
+        
                 <table> <!-- Inicio da tabela -->
                     <caption>Resumo dos Times</caption> <!-- Titulo da tabela -->
                     <thead> <!-- Cabeçalho da tabela -->
