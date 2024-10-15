@@ -16,14 +16,21 @@ fetch(url)
 
 
 function exibir_fuso() {
-    const timezone = document.getElementById(timezones).value;
+    const timezone = document.getElementById('timezones').value;
     const urltimezone = `https://worldtimeapi.org/api/timezone/${timezone}`;
 
     fetch(urltimezone)
         .then(response => response.json())
         .then(fuso => {
                 const datetime = fuso.datetime;
-                resultado.innerHTML = `<b>${timezone}<b>: ${datetime}`
+                let [data, hora] = datetime.split('T');
+                let [ano, mes, dia] = data.split('-');
+                
+                hora = hora.split('.')[0];
+                data = `${dia}/${mes}/${ano}/`;
+                
+                resultado.innerHTML +=
+                 `<br><b>${timezone}</b>: ${data} ${hora} (${datetime})<br>`
         });
 }
 // Lista as timezones
