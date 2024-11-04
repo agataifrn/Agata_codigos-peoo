@@ -1,3 +1,4 @@
-let hello: string;
-hello = "oiiiiiiiii"
+let hello: string = "oiiiii gente";
+console.log(hello);
+hello = hello + ' do meu coração'
 console.log(hello);
