@@ -30,7 +30,30 @@ class Livro {
     }
 }
 
-let livro1 = new Livro("Harry Potter", "JK Rowlling", 70.90);
+class Biblioteca {
+    private _livros : Livro[];
+
+    constructor() {
+        
+        
+
+    }
+}
+
+/* Crie uma classe Biblioteca que possui uma propriedade livros, que é um array de objetos da classe Livro. 
+Implemente um método adicionarLivro(livro: Livro) para adicionar novos livros ao array. Implemente outro método listarLivros() 
+que exibe o título e o autor de todos os livros adicionados à biblioteca. Crie uma instância de Biblioteca, 
+adicione alguns livros e teste a listagem. */
+
+
+
+
+
+
+
+
+
+/* let livro1 = new Livro("Harry Potter", "JK Rowlling", 70.90);
 let livro2 = new Livro("O Amor Não É Óbvio", "Elayne Baeta", 60.75);
 let livro3 = new Livro("Hamlet", "Shakspere", 140.99);
 
@@ -40,4 +63,4 @@ livros.forEach(livro => {
 });
 
 livro2.preco = -1.99
-console.log(livro2.descricao());
+console.log(livro2.descricao()); */
