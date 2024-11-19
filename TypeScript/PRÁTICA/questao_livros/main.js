@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var livro_1 = require("./livro");
+var biblioteca_1 = require("./biblioteca");
+var livro_digital_1 = require("./livro_digital");
+var livro1 = new livro_1.Livro("Harry Potter", "JK Rowlling", 70.90);
+var livro2 = new livro_1.Livro("O Amor Não É Óbvio", "Elayne Baeta", 60.75);
+var livro3 = new livro_1.Livro("Hamlet", "Shakspere", 140.99);
+var livro4 = new livro_1.Livro("Bíblia", "DEUS", 2.99);
+var livro5 = new livro_digital_1.Livro_Digital("Diário de Anne Frank", "Fundação A.F", 80.99, "EPub");
+var lista_livros = [livro1, livro2, livro3, livro4, livro5];
+var biblio = new biblioteca_1.Biblioteca(lista_livros);
+biblio.listarLivros();

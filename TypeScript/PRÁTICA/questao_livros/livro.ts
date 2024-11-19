@@ -23,7 +23,7 @@ export class Livro {
     }
 
     descricao() : string {
-        return `------------- \n Livro: ${this._titulo} \n Autor: ${this._autor} \n Preço: R$${this._preco.toFixed(2)}`;
+        return `# Livro: ${this._titulo} # Autor: ${this._autor} # Preço: R$${this._preco.toFixed(2)}`;
     }
 
 }

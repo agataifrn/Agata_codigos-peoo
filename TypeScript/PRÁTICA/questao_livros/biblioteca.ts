@@ -1,9 +1,10 @@
-class Biblioteca {
+import { Livro } from "./livro";
+export class Biblioteca {
     private livros : Livro[] = [];
 
     constructor(livros? : Livro[]) { //Interrogação serve para ser um parâmetro OPCIONAL
         if (livros) {
-            lista_livros.forEach(livro => {
+            livros.forEach(livro => {
                 this.livros.push(livro);
             });
         }
