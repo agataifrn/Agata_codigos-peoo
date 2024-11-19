@@ -8,6 +8,8 @@ let livro3 = new Livro("Hamlet", "Shakspere", 140.99);
 let livro4 = new Livro("Bíblia", "DEUS", 2.99);
 let livro5 = new Livro_Digital("Diário de Anne Frank", "Fundação A.F", 80.99, "EPub")
 
-let lista_livros : Livro[] = [livro1, livro2, livro3, livro4, livro5];
-let biblio = new Biblioteca(lista_livros);
+let lista_livros : Livro[] = [livro1, livro2, livro3, livro4];
+let biblio = new Biblioteca();
+biblio.adicionarLivros(lista_livros);
+biblio.adicionarLivro(livro5);
 biblio.listarLivros();
