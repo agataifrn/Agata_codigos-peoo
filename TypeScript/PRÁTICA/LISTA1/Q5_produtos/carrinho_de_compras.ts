@@ -31,6 +31,10 @@ export class CarrinhoDeCompras {
         return total;
     }
 
+    calcularTotal_2(): number { //   valor final     iteração (oq ele vai fzr)   valor inicial (0)
+        return this.produtos.reduce((total, produto) => total + produto.preco, 0);
+      } // outra forma de calcular usando o reduce (que junta todos os valores de uma array em um valor só)
+
     exibirTotal(): void {
         const total = this.calcularTotal();
         console.log(`O total do carrinho é: R$${total.toFixed(2)}`);

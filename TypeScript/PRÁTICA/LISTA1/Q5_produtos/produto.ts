@@ -7,12 +7,7 @@ export class Produto {
         this._preco = preco;
     }
 
-    get preco() {
-        return this._preco;
-    }
+    get nome() : string { return this._nome; }
+    get preco() : number { return this._preco; }
     
-    get nome() {
-        return this._nome;
-    }
-
 }
