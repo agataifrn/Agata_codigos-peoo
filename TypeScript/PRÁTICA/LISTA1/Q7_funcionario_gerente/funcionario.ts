@@ -1,6 +1,6 @@
 export class Funcionario {
-    private _nome : string;
-    private _salario : number;
+    protected _nome : string;
+    protected _salario : number;
 
     constructor(nome: string, salario: number) {
         this._nome = nome;
@@ -19,6 +19,10 @@ export class Funcionario {
         else {
             console.log(`O salário deve ser positivo!`)
         }
+    }
+
+    descricao() : string {
+        return `Funcionário: ${this._nome} # Salário: R$${this._salario}`
     }
 
 } 
