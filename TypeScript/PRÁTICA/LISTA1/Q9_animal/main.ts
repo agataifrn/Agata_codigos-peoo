@@ -3,9 +3,12 @@ import { Cachorro } from "./cachorro_gato";
 import { Gato } from "./cachorro_gato";
 
 let axolotin = new Animal("Axolote");
-let gatin = new Animal("Axolote");
-let dogin = new Animal("Axolote");
+let gatin = new Gato("Axolote");
+let dogin = new Cachorro("Axolote");
 
+console.log(axolotin.emitirSom());
+console.log(gatin.emitirSom());
+console.log(dogin.emitirSom());
 
 
 
