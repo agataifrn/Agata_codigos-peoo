@@ -27,6 +27,9 @@ export class Filme {
 
 }
 
+// Só fiz até essa part prof, srry :/
+
+
 /* 
 Crie uma classe Filme com as propriedades: titulo (string), diretor (string),
 anoLancamento (number) e avaliacoes (array de numbers). X
